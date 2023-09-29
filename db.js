@@ -2,7 +2,12 @@
 
 const pg = require("pg");
 
-const db = new pg.Client("postgresql:///lunchly");
+const USERNAME = 'YOURUSERNAME'
+const PASSWORD = 'PASSWORD'
+
+const db = new pg.Client(`postgresql://${USERNAME}:${PASSWORD}@localhost:5432/lunchly`);
+
+// const db = new pg.Client("postgresql:///lunchly");
 
 db.connect();
 
